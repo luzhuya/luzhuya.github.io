@@ -1,107 +1,127 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheems | Terminal Home</title>
-    <style>
-        :root {
-            --green: #00ff41;
-            --bg: #0d0d0d;
-        }
-        body {
-            background-color: var(--bg);
-            color: var(--green);
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
-            margin: 0;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            width: 100%;
-        }
-        #terminal-text {
-            white-space: pre-wrap;
-            margin-bottom: 20px;
-        }
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: var(--green);
-            animation: blink 1s infinite;
-            vertical-align: middle;
-        }
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-        nav {
-            margin-top: 30px;
-            border-top: 1px solid #333;
-            padding-top: 20px;
-        }
-        nav a {
-            color: var(--green);
-            text-decoration: none;
-            border: 1px solid var(--green);
-            padding: 5px 15px;
-            margin-right: 10px;
-            display: inline-block;
-            transition: all 0.3s;
-        }
-        nav a:hover {
-            background: var(--green);
-            color: var(--bg);
-            box-shadow: 0 0 15px var(--green);
-        }
-        .command { color: #fff; }
-    </style>
-</head>
+  <meta charset="utf-8">
+  
+  <title>Cheems&#39; homepage</title>
+
+  
+  <meta name="author" content="CHeems">
+  
+
+  
+
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="Cheems&#39; personal homepage"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Cheems&#39; personal homepage" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
 <body>
+<div class="blog">
+  <div class="content">
 
-<div class="container">
-    <div id="terminal-text"></div><span class="cursor"></span>
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Cheems&#39; personal homepage</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+    </ul>
+  </nav>
+</header>
 
-    <nav id="nav-links" style="display: none;">
-        <a href="https://your-blog-url.vercel.app">进入博客 [BLOG]</a>
-        <a href="https://github.com/luzhuya">GitHub</a>
-        <a href="https://twitter.com/DonNotLeo">Twitter</a>
-    </nav>
+    <main class="site-main posts-loop">
+    
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2024/05/26/hello-world/"><span>生活原本沉闷 但跑起来就有风！</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2024/05/26/hello-world/" rel="bookmark">
+        <time class="entry-date published" datetime="2024-05-26T08:04:42.352Z">
+          2024-05-26
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>Welcome to Cheems’home page! This is my personal home page address. Here you can find some information about me. This is my <a target="_blank" rel="noopener" href="https://github.com/luzhuya/">Github</a>, <a target="_blank" rel="noopener" href="https://twitter.com/DonNotLeo">Twitter</a>, <a href="mailto:rooycu@gmail.com">Email</a><br>In addition, there are some links to my other sites!</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+
+<nav class="pagination">
+  
+  
+</nav>
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2024 CHeems
+    
+  </p>
+</footer>
+    
+    
+  </div>
 </div>
-
-<script>
-    const text = `> Initializing system...
-> Connection established.
-> User: Cheems
-> Status: Running 
-> "生活原本沉闷，但跑起来就有风！"
-
-[Self-Introduction]
-我是 Cheems，一名极客。
-目前正沉迷于 OpenWrt 自动化、Tailscale 组网以及静态博客架构。
-
-> 命令: list --all-links`;
-
-    let i = 0;
-    const speed = 50; // 打字速度（毫秒）
-
-    function typeWriter() {
-        if (i < text.length) {
-            document.getElementById("terminal-text").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        } else {
-            // 打字结束后显示导航栏
-            document.getElementById("nav-links").style.display = "block";
-        }
-    }
-
-    window.onload = typeWriter;
-</script>
-
 </body>
 </html>
